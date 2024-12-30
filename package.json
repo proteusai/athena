@@ -1,0 +1,45 @@
+{
+  "name": "@proteus-ai/strap",
+  "version": "0.0.2",
+  "description": "CLI tool to auto-generate code for API server and API client.",
+  "author": "Franklin Chieze",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "repository": "https://github.com/proteusai/strap",
+  "bin": {
+    "strap": "./bin/strap"
+  },
+  "scripts": {
+    "build": "yarn clean:some && tsc -p .",
+    "clean:all": "rm -rf ./node_modules ./package-lock.json ./lib ./docs",
+    "clean:some": "rm -rf ./lib ./docs",
+    "docs": "typedoc --out docs ./src",
+    "dev": "yarn build && node ./lib/index.js",
+    "dev2": "yarn build && node ./lib/index.js ./test/src/*.ts -p ./test/tsconfig.json -t \">=0.4.16 <0.9.11\" -f",
+    "global": "npm i -g && strap",
+    "refresh": "yarn clean:all && npm install",
+    "publish-package": "yarn build && yarn publish",
+    "start": "yarn build && yarn global",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tscov": "tscov --min-coverage 90",
+    "tscov:d": "tscov --details"
+  },
+  "dependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "figlet": "^1.8.0",
+    "fs-extra": "^11.2.0",
+    "kleur": "^4.1.5",
+    "ts-morph": "^24.0.0",
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "@liftr/tscov": "^2.0.0",
+    "@types/figlet": "^1.7.0",
+    "@types/node": "^22.10.2",
+    "@types/yargs": "^17.0.33",
+    "typescript": "^5.7.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

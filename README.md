@@ -1,16 +1,18 @@
-# Athena
+# Strap
 
 CLI tool to auto-generate code for API server and API client.
 
-## Name Inspiration
-
-According to Greek mythology, in the creation of man, Prometheus shaped man out of mud, and Athena breathed life into his clay figure.
-
-Similarly, the Athena CLI tool takes in _models_ and creates fully functional API servers and clients.
-
 ## Installation
 
+```bash
+npm i -g @proteus-ai/strap
+```
+
 ## Usage
+
+```bash
+strap
+```
 
 ## Defining Models
 
@@ -28,4 +30,4 @@ Similarly, the Athena CLI tool takes in _models_ and creates fully functional AP
 
 ## Tools
 
-https://ts-morph.com
+(https://ts-morph.com)[https://ts-morph.com]
