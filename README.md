@@ -10,6 +10,8 @@ Similarly, the Athena CLI tool takes in _models_ and creates fully functional AP
 
 ## Installation
 
+## Usage
+
 ## Defining Models
 
 ## Emitting Prisma
