@@ -1,17 +1,17 @@
-# Strap
+# Spin
 
-CLI tool to auto-generate code for API server and API client.
+CLI tool to spin out (i.e. auto-generate) code for API server and API client.
 
 ## Installation
 
 ```bash
-npm i -g @proteus-ai/strap
+npm i -g @proteus-ai/spin
 ```
 
 ## Usage
 
 ```bash
-strap
+spin
 ```
 
 ## Defining Models

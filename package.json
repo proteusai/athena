@@ -1,22 +1,21 @@
 {
-  "name": "@proteus-ai/strap",
-  "version": "0.0.2",
-  "description": "CLI tool to auto-generate code for API server and API client.",
+  "name": "@proteus-ai/spin",
+  "version": "0.0.1",
+  "description": "CLI tool to auto-generate code for API server and API client",
   "author": "Franklin Chieze",
   "main": "lib/index.js",
   "license": "MIT",
-  "repository": "https://github.com/proteusai/strap",
+  "repository": "https://github.com/proteusai/spin",
   "bin": {
-    "strap": "./bin/strap"
+    "spin": "./bin/spin"
   },
   "scripts": {
     "build": "yarn clean:some && tsc -p .",
     "clean:all": "rm -rf ./node_modules ./package-lock.json ./lib ./docs",
     "clean:some": "rm -rf ./lib ./docs",
     "docs": "typedoc --out docs ./src",
-    "dev": "yarn build && node ./lib/index.js",
-    "dev2": "yarn build && node ./lib/index.js ./test/src/*.ts -p ./test/tsconfig.json -t \">=0.4.16 <0.9.11\" -f",
-    "global": "npm i -g && strap",
+    "dev": "yarn build && node ./lib/index.js ./test/input/**/*.ts -p ./test/tsconfig.json -o graphql-server",
+    "global": "npm i -g && spin",
     "refresh": "yarn clean:all && npm install",
     "publish-package": "yarn build && yarn publish",
     "start": "yarn build && yarn global",
@@ -29,7 +28,9 @@
     "figlet": "^1.8.0",
     "fs-extra": "^11.2.0",
     "kleur": "^4.1.5",
+    "reflect-metadata": "^0.2.2",
     "ts-morph": "^24.0.0",
+    "tsyringe": "^4.8.0",
     "yargs": "^17.7.2"
   },
   "devDependencies": {

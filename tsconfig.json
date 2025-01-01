@@ -1,17 +1,18 @@
 {
     "compilerOptions": {
         "allowSyntheticDefaultImports": true,
+        "emitDecoratorMetadata": true,
         "esModuleInterop": true,
+        "experimentalDecorators": true,
         "importHelpers": true,
         "lib": ["ES6", "ES2015", "ESNext"],
         "module": "commonjs",
         "outDir": "lib",
+        "removeComments": true,
         "resolveJsonModule": true,
         "rootDir": "src",
         "strict": true,
-        "target": "ESNext",
-        "removeComments": true,
-        "experimentalDecorators": true
+        "target": "ESNext"
     },
     "exclude": ["node_modules", "lib", "test", "templates"]
 }

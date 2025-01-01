@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+      "target": "ESNext",
+      "module": "commonjs",
+      "lib": ["ES6", "ES2015", "ESNext"],
+      "outDir": "src"
+    },
+    "exclude": []
+  }
