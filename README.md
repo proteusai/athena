@@ -16,6 +16,8 @@ spin
 
 ## Defining Models
 
+A model is a TypeScript class that is decorated with the @model
+
 ## Emitting Prisma
 
 ## Emitting GraphQL Server
@@ -27,6 +29,8 @@ spin
 ## Emitting REST API Server (Fastify)
 
 ## Emitting REST API JavaScript Client ??
+
+## Defining Custom Handlers
 
 ## Tools
 

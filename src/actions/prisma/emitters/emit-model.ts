@@ -37,7 +37,11 @@ function convertSimpleTsTypeToPrismaType(type: Type) {
             return 'Boolean';
         case 'Date':
             return 'DateTime';
-        default:
+        default: {
+            if (type.isClassOrInterface()) {
+                return type.compilerType.symbol.escapedName;
+            }
             return type.getText();
+        }
     }
 }
