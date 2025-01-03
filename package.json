@@ -1,7 +1,7 @@
 {
   "name": "@proteus-ai/spin",
   "version": "0.0.1",
-  "description": "CLI tool to auto-generate code for API server and API client",
+  "description": "CLI tool to spin out (i.e. generate) code for API server and API client",
   "author": "Franklin Chieze",
   "main": "lib/index.js",
   "license": "MIT",

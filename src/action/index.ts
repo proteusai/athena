@@ -10,4 +10,5 @@ export interface IRunContext {
     isClient: boolean;
     isServer: boolean;
     project: Project;
+    shouldOutputPrima?: boolean;
 }

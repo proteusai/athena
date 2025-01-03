@@ -18,10 +18,10 @@ export async function buildArgv(): Promise<any> {
             .usage('Usage: --out <output type>')
             .option('prisma', {
                 type: 'boolean',
-                description: 'option to determine if prisma is being output',
-                default: true
+                description: 'option to determine if Prisma schema is being output',
+                // default: true
             })
-            .usage('Usage: --out <output type>')
+            .usage('Usage: --prisma <boolean>')
         .argv;
     return argv;
 }
