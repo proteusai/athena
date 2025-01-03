@@ -10,7 +10,8 @@ export async function cli(): Promise<any> {
     Logger.logTitleAndBanner();
 
     const argv = await buildArgv();
-    // console.log(argv);
+
+    // TODO: throw error if certain fields are not provided
 
     const project = await buildProject({
         sourceFiles: argv._ ? argv._.map((item: any) => item.toString()) : undefined,
@@ -27,7 +28,9 @@ export async function cli(): Promise<any> {
             fs,
             isClient: (argv.out as string).endsWith('-client'),
             isServer: (argv.out as string).endsWith('-server'),
+            // TODO: add logger
             project,
+            shouldOutputPrima: argv.prisma ?? undefined,
         });
     }));
 }
